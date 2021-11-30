@@ -127,19 +127,70 @@ public class pptArray {
         for(int i=1;i<arr.length;i++){ //kondisi awal i=0. lakukan loop
                                        //selama i<panjang arr. lakukan i++ sebelum
                                        //iterasi berikutnya.           
+           
             if(arr[i]<min){ //jika arr di posisi i kurang dari min
-                min=arr[i]; //assign nilai arr pada posisi i pada variabel min
-            }else if(arr [i]>max){ //jika arr di posisi i lebih dari max
-                max=arr[i]; //assign nilai arr di posisi i pada variabel max
+                min=min(arr[i]); //assign nilai arr pada posisi i pada variabel min
+            }else if(arr[i]>max){ //jika arr di posisi i lebih dari max
+                max=max(arr[i]); //assign nilai arr di posisi i pada variabel max
             }
         }
         System.out.println("min= "+min+" max= "+max);
-    }   
+    }
+           
+    static int max(int x){
+        int maximum=x;
+        return maximum;
+    }
     
+    static int min(int x){
+        int minimum=x;
+        return minimum;
+    }
+    
+    
+    public static void check() {
+       
+    
+    int max = 0, min = 0;
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Masukkan jumlah elemen array: ");
+        int n = sc.nextInt();
+        int[] a = new int[n];
+
+        System.out.println("Masukkan " + n + " nilai : ");
+        for (int i = 0; i < a.length; i++) {
+            a[i] = sc.nextInt();
+            if (i == 0) {
+                max = a[0];
+                min = a[0];
+            }
+            else{
+            min=min1(min, a[i]);
+            max=max1(max, a[i]);}
+
+        }
+        System.out.println("Nilai max : " + max);
+        System.out.println("Nilai min : " + min);
+    }
+    
+    static int max1(int i,int x){
+        if (x > i) {
+                i = x;
+            }
+        return i;
+    }
+    
+    static int min1(int min, int x){
+        if (x < min) {
+                min = x;
+            }
+        return min;
+    }
+
     /*@param args the command line arguments*/
     public static void main(String[] args) {
         int[] arr={2,5,9,2,4,9,1,10,4};
-        minMax(arr);
+        int i=arr[2];
         bubbleSort(arr);
         
     }
