@@ -10,7 +10,7 @@ import java.util.List;
 import java.util.Scanner;
 
 
-public class bubbleSort {
+public class pptArray {
     
     /**
      * program mengurutkan array dari nilai paling kecil hingga paling besar
@@ -135,6 +135,7 @@ public class bubbleSort {
         }
         System.out.println("min= "+min+" max= "+max);
     }   
+    
     /*@param args the command line arguments*/
     public static void main(String[] args) {
         int[] arr={2,5,9,2,4,9,1,10,4};
