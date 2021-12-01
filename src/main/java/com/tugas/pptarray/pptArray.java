@@ -191,7 +191,7 @@ public class pptArray {
     public static void main(String[] args) {
         int[] arr={2,5,9,2,4,9,1,10,4};
         int i=arr[2];
-        bubbleSort(arr);
+        check();
         
     }
 
